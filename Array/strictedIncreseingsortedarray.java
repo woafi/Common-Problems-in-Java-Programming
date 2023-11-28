@@ -10,7 +10,7 @@ public class strictedIncreseingsortedarray{
         }
     }
     public static void main(String[] args) {
-        int[] arr={1,2,3,3};
+        int[] arr={1,2,4,3};
         System.out.println(isSort(arr, 0));
     }
 }
