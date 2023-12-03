@@ -2,7 +2,7 @@ import java.util.*;
 public class factorial {
     
 
-    public static void logic(int i, int n, int fact){
+    public static void logic(long i, long n, long fact){
         if (i == n){
             fact*=i;
             System.out.println(fact);
@@ -15,7 +15,7 @@ public class factorial {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
+        long n=sc.nextInt();
         logic(1, n, 1);       
     }
 }

@@ -40,7 +40,6 @@ public class AddGet {
 
         //sorting
         Collections.sort(list);
-        System.out.println("\n"+list);
 
 
     }
