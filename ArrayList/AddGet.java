@@ -13,7 +13,7 @@ public class AddGet {
         System.out.println(list);
 
         //get elememts
-        int element =list.get(3);
+        int element =list.get(2);
         System.out.println(element);
 
         //add element in between
@@ -40,6 +40,7 @@ public class AddGet {
 
         //sorting
         Collections.sort(list);
+        System.out.println("\n" + list);
 
 
     }
