@@ -25,4 +25,4 @@ class Student{
         student1.getData();
         student1.displayData();
     }
- }
+}

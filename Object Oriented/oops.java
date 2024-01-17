@@ -1,5 +1,4 @@
 
-
 class Pen {
     String type; //ballpen, gel
     String color;
