@@ -99,10 +99,32 @@ public class LL {
         return size;
     }
 
+    public void reverseIterate(){
+
+        if (head == null || head.next == null){
+            return;
+        }
+
+        Node prevNode = head;
+        Node currNode = head.next;
+        while(currNode != null){
+            Node nextNode = currNode.next;
+            currNode.next = prevNode;
+            
+            //update
+            prevNode = currNode;
+            currNode = nextNode;
+
+
+        }
+        head.next = null;
+        head = prevNode;
+
+    }
 
     public static void main(String[] args) {
         LL list =new LL();
-        list.addFirst("a");
+        /*list.addFirst("a");
         list.addFirst("is");
         list.addLast("list");
         list.addFirst("This");
@@ -110,7 +132,15 @@ public class LL {
         list.deleteFirst();
         list.deleteLast();
         list.printList();
-        System.out.println(list.getSize());
+        System.out.println(list.getSize());*/
+
+        list.addLast("1");
+        list.addLast("2");
+        list.addLast("3");
+        list.addLast("4");
+        list.printList();
+        list.reverseIterate();
+        list.printList();
         
     }
 }
