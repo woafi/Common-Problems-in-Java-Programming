@@ -4,8 +4,8 @@ public class IntegertoStrings {
         int number = Integer.parseInt(str);
         System.out.println(number);
 
-         number = 123;
-         str = Integer.toString(number);
+        int number2 = 123;
+         str = Integer.toString(number2);
         System.out.println(str);
        
        
