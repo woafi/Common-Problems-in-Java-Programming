@@ -1,3 +1,5 @@
+import org.w3c.dom.Node;
+
 public class LL {
     Node head;
     private int size;
@@ -13,11 +15,9 @@ public class LL {
         Node(String data){
             this.data = data;
             this.next = null;
-            size++;
-            
+            size++;  
         }
     }
-
     //add - first
 
     public void addFirst(String data){
@@ -36,13 +36,35 @@ public class LL {
             head = newNode;
             return;
         }
-
         Node currNode = head;
         while (currNode.next != null){
             currNode = currNode.next;
         }
-
         currNode.next = newNode;
+    }
+    //addInMiddle
+    public void addInMiddle(int index, String data){
+        if(index > size || index < 0) {
+           System.out.println("Invalid Index value");
+           return;
+       }
+       size++;
+       Node newNode = new Node(data);
+       if(head == null || index == 0) {
+            newNode.next = head;
+            head = newNode;
+        return;
+    }
+        Node currNode = head;
+        for (int i=1; i<size; i++){
+            if(i == index){
+                Node nextNode = currNode.next;
+                currNode.next = newNode;
+                newNode.next = nextNode;
+                break;
+            }
+            currNode = currNode.next;
+        }
     }
 
     //delete first
@@ -75,8 +97,8 @@ public class LL {
             secondLast = secondLast.next;
         }
         secondLast.next = null;
-
      }
+     
 
     //print
     public void printList(){
@@ -134,7 +156,7 @@ public class LL {
     }
 
     public static void main(String[] args) {
-        LL list =new LL();
+        LL list = new LL();
         /*list.addFirst("a");
         list.addFirst("is");
         list.addLast("list");
@@ -149,8 +171,9 @@ public class LL {
         list.addLast("2");
         list.addLast("3");
         list.addLast("4");
+        list.addInMiddle(3, "2.5");
         list.printList();
-       list.head = list.reverseRecursive(list.head);
+        list.head = list.reverseRecursive(list.head);
         list.printList();
         
     }
