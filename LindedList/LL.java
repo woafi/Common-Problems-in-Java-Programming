@@ -1,12 +1,10 @@
-import org.w3c.dom.Node;
-
 public class LL {
     Node head;
     private int size;
 
     LL(){
         this.size = 0;
-    }
+    }// constructor of main class
 
     class Node {
         String data;
@@ -177,4 +175,4 @@ public class LL {
         list.printList();
         
     }
-}
+} //main class
