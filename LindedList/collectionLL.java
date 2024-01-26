@@ -1,4 +1,4 @@
-package LindedList;
+
 //collection framework Linked List
 
 import java.util.*;
