@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class test {
+public class StringToUpperCase {
 
     public static void main(String[] args) {
         
