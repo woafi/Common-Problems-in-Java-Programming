@@ -5,7 +5,11 @@ public class Stringbuilder {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         String str=sc.next();
-        String add=sc.next();
+
+        //reverse
+        String newStr = new StringBuilder(str).reverse().toString();
+        System.out.println(newStr);
+        
         StringBuilder sb = new StringBuilder(str);
         System.out.println(sb);
         sb.setCharAt(0, 'R'); //for replace char
@@ -14,8 +18,15 @@ public class Stringbuilder {
         System.out.println(sb);
         sb.delete(2, 5); //for delete
         System.out.println(sb);
+
+        
+        String add=sc.next();
         sb.append(add); // str= str + "i";
         System.out.println(sb);
+
+        
+
+        
     }
     
 }

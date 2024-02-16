@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class test {
+public class palindrome {
     public static void main(String[] args) {
        Scanner sc=new Scanner(System.in);
         String A=sc.next();
@@ -21,5 +21,4 @@ public class test {
             System.out.println("No");
         }
     }
-    
 }
