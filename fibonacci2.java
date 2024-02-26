@@ -2,7 +2,7 @@ import java.util.*;
 public class fibonacci2 {
     public static int Fibonacci(int i) {
      if ( i == 0 )
-     return 0;
+     return 0;                  //if (n<2){return 1;}
      else if ( i == 1 )
      return 1;
      else

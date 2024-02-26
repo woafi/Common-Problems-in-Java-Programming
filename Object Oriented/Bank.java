@@ -1,4 +1,4 @@
-package bank;
+
 class Account{
     private String password;
     protected String email;

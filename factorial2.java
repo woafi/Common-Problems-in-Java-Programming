@@ -2,7 +2,7 @@ import java.util.*;
 public class factorial2 {
     
     public static int logic(int n){
-          if (n==0 || n==1){
+          if (n==0 || n==1){      //if (n<=1){ return 1;}
           return 1;
           }
           int facta= logic(n-1);
