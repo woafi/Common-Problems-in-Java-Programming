@@ -5,8 +5,8 @@ public class mergeSort {
         int idx2 = mid+1;
         int x=0;
         while (idx1 <= mid && idx2 <= ei){
-            if(arr[idx1]<=arr[idx2]){
-                merged[x] =arr [idx1];
+            if(arr[idx1] <= arr[idx2]){
+                merged[x] = arr [idx1];
                 x++;
                 idx1++;
             }
@@ -27,7 +27,7 @@ public class mergeSort {
             idx2++;
         }
         for(int i=0, j=si; i<merged.length; i++, j++){
-            arr[j] =merged[i];
+            arr[j] = merged[i];
         }
         return;
     }

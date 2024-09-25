@@ -1,1 +1,1 @@
-innerclass
+static

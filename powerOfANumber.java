@@ -6,16 +6,14 @@ public class powerOfANumber {
         if(x==0){
             return 0;
         }
-        int num=calPower(x, n-1);
+        int num = calPower(x, n-1);
+        //System.out.println(n + " ");
         int sum=x*num;
         return sum;
     }
     public static void main(String[] args) {
         int x=5;
         int n=2;
-       int result= calPower(x, n);
-       System.out.println(result);
+       System.out.println(calPower(x, n));
     }
-    
-    
 }

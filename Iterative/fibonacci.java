@@ -1,6 +1,6 @@
 public class fibonacci {
     public static void recall(int fst, int sec, int n){
-        if (n==0){
+        if (n == 0){
             return;
         }
         int nxtTerm=fst+sec;
