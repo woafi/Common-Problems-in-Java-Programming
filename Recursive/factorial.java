@@ -13,10 +13,8 @@ public class factorial {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        for (int t = sc.nextInt(); t > 0; t--) {
+        
             long n = sc.nextInt();
             logic(1, n, 1);
-        }
     }
 }

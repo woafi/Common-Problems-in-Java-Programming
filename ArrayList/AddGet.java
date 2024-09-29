@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 public class AddGet {
     public static void main(String[] args) {
-        ArrayList<Integer> list =new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
 
         //add elements
         list.add(0);
@@ -13,7 +13,7 @@ public class AddGet {
         System.out.println(list);
 
         //get elememts
-        int element =list.get(2);
+        int element = list.get(2);
         System.out.println(element);
 
         //add element in between

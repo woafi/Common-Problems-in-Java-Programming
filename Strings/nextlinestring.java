@@ -9,7 +9,8 @@ public class nextlinestring{
             
             String sen = sc.nextLine();
             System.out.println(counter + " " + sen);
-            counter++;   
+            counter++; 
         }
+        System.out.println("Got it");
     }
 }

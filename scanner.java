@@ -12,11 +12,11 @@ public class scanner {
         Scanner sc = new Scanner(System.in);
         //String name = sc.next();  //for single token
         String firstname = sc.nextLine();
-        String lastname=sc.nextLine();
+        String lastname = sc.nextLine();
         String fullname = firstname +" "+lastname; 
         System.out.println(fullname);
         System.out.println(fullname.length()); //length
-        char a=sc.next().charAt(0);
+        char a = sc.next().charAt(0);
         System.out.println(a);
 
     }

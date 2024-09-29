@@ -4,13 +4,13 @@ public class chartostring {
         Scanner sc=new Scanner(System.in);
         System.out.println("String: ");
         String origin=sc.nextLine();
-        String[] result=new String[origin.length()];
+        Character[] result=new Character[origin.length()];
 
         for(int i=0; i<origin.length(); i++){
-            result[i]= String.valueOf(origin.charAt(i));
+            result[i] = origin.charAt(i);
             System.out.print(result[i]);
         }
-       // String strCopy = String.valueOf(origin);
+        //String strCopy = String.valueOf(origin);
         //System.out.println(strCopy);
 }
     

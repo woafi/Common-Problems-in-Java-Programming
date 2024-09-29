@@ -5,7 +5,7 @@ public class IntegertoStrings {
         System.out.println(number);
 
         int number2 = 123;
-         str = Integer.toString(number2);
+        str = Integer.toString(number2);
         System.out.println(str);
        
        

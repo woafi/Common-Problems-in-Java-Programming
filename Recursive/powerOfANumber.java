@@ -7,7 +7,6 @@ public class powerOfANumber {
             return 0;
         }
         int num = calPower(x, n-1);
-        //System.out.println(n + " ");
         int sum=x*num;
         return sum;
     }

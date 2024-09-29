@@ -9,12 +9,11 @@ public class checking {
         int number=sc.nextInt();
         if (number==0) {zn++; }
         if (number<0) {cn++;}
-        if (number>0) {cp++;}       
+        if (number>0) {cp++;}
     }
-    
     System.out.println("positive: "+cp);
     System.out.println("zero: "+zn);
-    System.out.println("Negative: "+cn);      
+    System.out.println("Negative: "+cn);    
     }
     
 }

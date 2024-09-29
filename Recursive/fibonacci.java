@@ -8,9 +8,9 @@ public class fibonacci {
         recall(sec, nxtTerm, n-1 );
     }
     public static void main(String[] args) {
-        int n=7;
-        int fst=0;
-        int sec=1;
+        int n = 5;
+        int fst = 0;
+        int sec = 1;
         System.out.print(fst+" ");
         System.out.print(sec+" ");
         recall(fst, sec, n-2);
