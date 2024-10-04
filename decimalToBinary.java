@@ -9,7 +9,6 @@ public class decimalToBinary {
         }
         remainder = n % 2;
         decimalToBinary(n >> 1);
-        System.out.println();
         System.out.print(remainder);
     }
 

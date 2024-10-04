@@ -11,13 +11,13 @@ public class repeated_word {
         private String mystery(int num, String s) {
             StringBuilder answer = new StringBuilder();
             for (int k = 0; k < num; k++) {
-                answer.append(s);
+                answer.append(s + " ");
             }
             return answer.toString();
         }
 
         public String toString() {
-            return phrase + " is " + word + " repeated";
+            return phrase + "is " + word + " repeated";
         }
     }
 

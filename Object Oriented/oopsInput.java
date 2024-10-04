@@ -2,7 +2,7 @@ import java.util.*;
 class Student{
     String name;
     int age;
-    static String school; // static = can be input without creating a object 
+    static String school; // static = can be input without creating an object 
 
     void getData(){
         Scanner sc=new Scanner(System.in);
