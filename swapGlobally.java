@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class swapGlobally {
 	
 static int a, b;
 

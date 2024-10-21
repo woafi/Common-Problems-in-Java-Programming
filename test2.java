@@ -1,27 +1,156 @@
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.*;
-
-class ali {
-    public static int cnt = 0;
-
-    public void set() {
-        cnt++;
-    }
-
-    public void get() {
-        System.out.println(cnt);
-    }
-}
-
 public class test2 {
+    Node head;
+    Node tail;
+    private int size;
+
+    // constructor initialize value to variable
+    test2() {
+        this.size = 0;
+    }// constructor of main class
+
+    /* Linked list Node */
+    class Node {
+        String data;
+        Node next;
+
+        Node(String data) {
+            this.data = data;
+            this.next = null;
+            size++;
+        }
+    }
+
+    // add First
+    public void addFirst(String data) {
+        Node newNode = new Node(data); // create new node
+        if (head == null) {
+            head = tail = newNode;
+            return;
+        }
+        newNode.next = head;
+        head = newNode;
+    }
+
+    // Add At Position
+    public void AddAtPosition(int index, String data) {
+        if (index < 0 || index > size) {
+            System.out.println("Invalid Index");
+        }
+        Node newNode = new Node(data);
+        if (head == null || index == 0){
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+        Node current = head;
+        for (int i = 1; i < size - 1 ; i++){
+            if (i == index){
+                Node nextNode = current.next;
+                current.next = newNode;
+                newNode.next =  nextNode;
+                break;
+            }
+            current = current.next;
+        }
+    }
+
+    // add last
+    public void addLast(String data) {
+        Node newNode = new Node(data); // create new node
+        if (head == null) {
+            head = tail = newNode;
+            return;
+        }
+        tail.next = newNode;
+        tail = newNode;
+    }
+
+    // delete First
+    public void deleteFirst() {
+        if (head == null) {
+            System.out.println("Empty");
+            return;
+        }
+        head = head.next;
+        size--;
+    }
+
+    // delete Last
+    public void deleteLast() {
+        if (head == null) {
+            System.out.println("Empty");
+            return;
+        }
+        if (head.next == null) {
+            head = tail = null;
+            size--;
+            return;
+        }
+        Node secondlast = head;
+        Node lastNode = head.next;
+        while (lastNode.next != null) {
+            lastNode = lastNode.next;
+            secondlast = secondlast.next;
+        }
+        secondlast.next = null;
+        tail = secondlast.next;
+
+        size--;
+    }
+
+    // Reverse Iterate
+    public void reverseIterate() {
+        if (head == null || head.next == null){
+            return;
+        }
+        Node prevNode = head;
+        Node currNode = head.next;
+        while(currNode != null){
+            Node nextNode = currNode.next;
+            currNode.next = prevNode;
+            //update
+            prevNode = currNode;
+            currNode = nextNode;
+        }
+        head.next = null ;
+        head = prevNode;
+    }
+
+    // print
+    public void printList() {
+        if (head == null) {
+            System.out.println("Empty");
+            return;
+        }
+        Node currNode = head;
+        while (currNode != null) {
+            System.out.print(currNode.data + "->");
+            currNode = currNode.next;
+        }
+        System.out.println("NULL");
+    }
+
+    // size
+    public int getSize() {
+        return size;
+    }
+
     public static void main(String[] args) {
-        ali a1 = new ali();
-        ali a2 = new ali();
-        a2.set();
-        a1.set();
-        a1.set();
-        a1.get();
+        test2 list = new test2();
+        list.addFirst("B"); // add first node
+        list.addFirst("A");
+        list.addLast("D"); // add last node
+        list.addLast("E");
+        list.addLast("F");
+        list.addLast("G");
+        list.AddAtPosition(2,"C"); // add in Middle
+        
+        // list.deleteFirst(); // delete First Node
+        // list.deleteLast(); // delete Last Node
+        // list.deleteLast();
+        // list.deleteLast();
+        // list.reverseIterate();
+        list.printList();
+        System.out.println(list.getSize());
     }
 }
