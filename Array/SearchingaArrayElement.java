@@ -25,8 +25,8 @@ public class SearchingaArrayElement {
         for(int i=0; i<row; i++){
             for (int j=0; j<coloum; j++){
             while (searchingelement == arrayelement[i][j]){
-                found = 1;
-                System.out.println("Element is found at index: "+(i+1)+(j+1));
+                found += 1;
+                System.out.println("Element is found at index: "+(i+1)+(j+1)+ " ");
                 break;
             }
         }

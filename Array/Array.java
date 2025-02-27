@@ -23,6 +23,13 @@ public class Array {
         Arrays.sort(arr, 1, 4);
         // Print the sorted array
         System.out.println(Arrays.toString(arr));
+        int arr1[];
+        arr1 = new int[2];
+        arr1[0] = 10;
+        System.out.println(arr1[0]);
+        int matrix[][] = {{2, 6, 7, 8}, {5, 6, 2}, {7, 0, 1}};
+        System.out.println(matrix.length);
+        System.out.println(matrix[0].length);
     }
 
 }

@@ -1,156 +1,45 @@
+import java.util.HashMap;
+
 public class test2 {
-    Node head;
-    Node tail;
-    private int size;
-
-    // constructor initialize value to variable
-    test2() {
-        this.size = 0;
-    }// constructor of main class
-
-    /* Linked list Node */
-    class Node {
-        String data;
-        Node next;
-
-        Node(String data) {
-            this.data = data;
-            this.next = null;
-            size++;
-        }
-    }
-
-    // add First
-    public void addFirst(String data) {
-        Node newNode = new Node(data); // create new node
-        if (head == null) {
-            head = tail = newNode;
-            return;
-        }
-        newNode.next = head;
-        head = newNode;
-    }
-
-    // Add At Position
-    public void AddAtPosition(int index, String data) {
-        if (index < 0 || index > size) {
-            System.out.println("Invalid Index");
-        }
-        Node newNode = new Node(data);
-        if (head == null || index == 0){
-            newNode.next = head;
-            head = newNode;
-            return;
-        }
-        Node current = head;
-        for (int i = 1; i < size - 1 ; i++){
-            if (i == index){
-                Node nextNode = current.next;
-                current.next = newNode;
-                newNode.next =  nextNode;
-                break;
+    public static int[] twoSum(int[] nums, int target) {
+        // Create a HashMap to store the difference and its corresponding index
+        HashMap<Integer, Integer> map = new HashMap<>();
+        
+        // Iterate through the array
+        for (int i = 0; i < nums.length; i++) {
+            // Calculate the difference
+            int complement = target - nums[i];
+            
+            // Check if the complement exists in the map
+            if (map.containsKey(complement)) {
+                return new int[] { map.get(complement), i };
             }
-            current = current.next;
+            
+            // Otherwise, add the current number and its index to the map
+            map.put(nums[i], i);
         }
-    }
-
-    // add last
-    public void addLast(String data) {
-        Node newNode = new Node(data); // create new node
-        if (head == null) {
-            head = tail = newNode;
-            return;
-        }
-        tail.next = newNode;
-        tail = newNode;
-    }
-
-    // delete First
-    public void deleteFirst() {
-        if (head == null) {
-            System.out.println("Empty");
-            return;
-        }
-        head = head.next;
-        size--;
-    }
-
-    // delete Last
-    public void deleteLast() {
-        if (head == null) {
-            System.out.println("Empty");
-            return;
-        }
-        if (head.next == null) {
-            head = tail = null;
-            size--;
-            return;
-        }
-        Node secondlast = head;
-        Node lastNode = head.next;
-        while (lastNode.next != null) {
-            lastNode = lastNode.next;
-            secondlast = secondlast.next;
-        }
-        secondlast.next = null;
-        tail = secondlast.next;
-
-        size--;
-    }
-
-    // Reverse Iterate
-    public void reverseIterate() {
-        if (head == null || head.next == null){
-            return;
-        }
-        Node prevNode = head;
-        Node currNode = head.next;
-        while(currNode != null){
-            Node nextNode = currNode.next;
-            currNode.next = prevNode;
-            //update
-            prevNode = currNode;
-            currNode = nextNode;
-        }
-        head.next = null ;
-        head = prevNode;
-    }
-
-    // print
-    public void printList() {
-        if (head == null) {
-            System.out.println("Empty");
-            return;
-        }
-        Node currNode = head;
-        while (currNode != null) {
-            System.out.print(currNode.data + "->");
-            currNode = currNode.next;
-        }
-        System.out.println("NULL");
-    }
-
-    // size
-    public int getSize() {
-        return size;
+        
+        // If no solution is found (shouldn't happen based on the problem description)
+        throw new IllegalArgumentException("No two sum solution");
     }
 
     public static void main(String[] args) {
-        test2 list = new test2();
-        list.addFirst("B"); // add first node
-        list.addFirst("A");
-        list.addLast("D"); // add last node
-        list.addLast("E");
-        list.addLast("F");
-        list.addLast("G");
-        list.AddAtPosition(2,"C"); // add in Middle
-        
-        // list.deleteFirst(); // delete First Node
-        // list.deleteLast(); // delete Last Node
-        // list.deleteLast();
-        // list.deleteLast();
-        // list.reverseIterate();
-        list.printList();
-        System.out.println(list.getSize());
+        // Example 1
+        int[] nums1 = {2, 7, 11, 15};
+        int target1 = 9;
+        int[] result1 = twoSum(nums1, target1);
+        System.out.println("Result: [" + result1[0] + ", " + result1[1] + "]");
+
+        // Example 2
+        int[] nums2 = {2,5,5,11};
+        int target2 = 10;
+        int[] result2 = twoSum(nums2, target2);
+        System.out.println("Result: [" + result2[0] + ", " + result2[1] + "]");
+
+        // Example 3
+        int[] nums3 = {3,2,3};
+        int target3 = 6;
+        int[] result3 = twoSum(nums3, target3);
+        System.out.println("Result: [" + result3[0] + ", " + result3[1] + "]");
     }
 }

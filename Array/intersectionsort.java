@@ -1,20 +1,20 @@
-public class intersectionsort{
+public class intersectionsort {
     public static void main(String[] args) {
-        int[] num={7,8,9,4,5,2,1}; //num=input number
+        int[] num = { 6, 3, 8, 7, 4, 5, 2, 1 }; // num=input number
 
-        for (int i=0; i<num.length; i++){ 
+        for (int i = 0; i < num.length; i++) {
             int current = num[i];
-            int j=i-1;
-            while (j >=0 && current < num[j]){
-                num[j+1]=num[j];
+            int j = i - 1;
+            while (j >= 0 && current < num[j]) {
+                num[j + 1] = num[j];
                 j--;
             }
-            //placement
-            num[j+1]=current;
+            // placement
+            num[j + 1] = current;
         }
-        for (int i=0; i<num.length; i++){
-            System.out.print(num[i]+" ");
-            }
+        for (int i = 0; i < num.length; i++) {
+            System.out.print(num[i] + " ");
+        }
 
     }
 }
